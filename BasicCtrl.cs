@@ -15,7 +15,7 @@ namespace ImproveWorkEfficiency
         /// <summary>
         /// 各ソフトウェア/フォルダのショートカットを置いているフォルダ：IWE_AdminForRemoconへのパス
         /// </summary>
-        readonly string AdminPath = "C:\\IWE_Admin\\";
+        readonly string AdminPath = @"C:\IWE_Admin\";
         /// <summary>
         /// 定期的な予定はここへ格納する。RegularSchedule
         /// </summary>
@@ -132,7 +132,7 @@ namespace ImproveWorkEfficiency
                 List<string> strSchedlList = new List<string>();
                 // Create an instance of StreamReader to read from a file.
                 // The using statement also closes the StreamReader.
-                using (StreamReader sr = new StreamReader("C:\\IWE_Admin\\Schedule.csv", System.Text.Encoding.GetEncoding("shift_jis")))
+                using (StreamReader sr = new StreamReader(@"C:\IWE_Admin\Schedule.csv", System.Text.Encoding.GetEncoding("shift_jis")))
                 {
                     int nHour, nMinute;
                     string line;

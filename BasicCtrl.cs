@@ -233,7 +233,11 @@ namespace ImproveWorkEfficiency
                             findPos = line.IndexOf(",");
                             // 残りの文字列の時刻部分を切り取る。
                             line = line.Substring(findPos + 1, line.Length - findPos - 1);
-                            // 一応、listAlarmTextにAddする。
+                            if (line.Contains(",") && line.IndexOf(",") == line.Length - 1)
+                            {
+                                line = line.TrimEnd(',');
+                            }
+                            // listAlarmTextにAddする。
                             listRegularDateText.Add(line);
                             ic += 1;    // カウンタを進めるのを忘れずに
                         }
